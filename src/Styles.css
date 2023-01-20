@@ -1,0 +1,62 @@
+body {
+  background-color: #c2d3cd;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+}
+
+h1 {
+  position: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 34px;
+  margin: 50px;
+  font-size: 50px;
+  font-family: Futura;
+}
+
+button {
+  font-size: 15px;
+  font-weight: 100;
+  color: blue;
+  border-radius: 8px;
+  border-color: #fff;
+  background-color: #fff;
+  width: 150px;
+  height: 30px;
+  margin-top: 40px;
+}
+
+@property --deg {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.fun {
+  width: 80px;
+  height: 80px;
+  margin-inline: auto;
+  background: salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  margin-top: 20px;
+
+  --deg: 0;
+  transition: --deg 1s ease-in-out;
+  transform: rotate(calc(var(--deg) * 1deg));
+}
+
+.fun:hover {
+  --deg: 120;
+}
+
+.alignItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

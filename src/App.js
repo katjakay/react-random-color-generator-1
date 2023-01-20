@@ -1,45 +1,45 @@
+import './Styles.css';
 import randomColor from 'randomcolor';
 import { useState } from 'react';
 
 export default function App() {
+  // 1. Passing the initial state and it return a variable with the current state value + add another function to update this value.
+  // 1.1 Using randomColor npm to generate random HEX codes.
+
   const [color, setColor] = useState(randomColor());
   return (
-    <div>
-      <h1
-        style={{
-          textAlign: 'center',
-          marginTop: 20,
-          fontFamily: 'Futura',
-        }}
-      >
-        Random Color Generator
-      </h1>
-
+    <div className="alignItem">
+      <div className="fun">👋</div>
+      <div>
+        <h1>Random Color Generator</h1>
+      </div>
       <div
         style={{
-          fontFamily: 'Futura',
-          height: 500,
+          justifyContent: 'center',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+
+          // 2. Using color variable in the style to make the background change according to click.
           backgroundColor: color,
+          fontFamily: 'Futura',
+          fontSize: 25,
           borderRadius: 10,
-          margin: 50,
-          boxShadow: 10,
-          fontSize: 40,
+          width: 800,
+          height: 500,
         }}
       >
-        Generated Color: {color}
+        GeneratedColor: {color}
       </div>
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          margin: 20,
+          margin: 10,
         }}
       >
         <button
+          // 3. Random color is generated when button is clicked using OnClick event
           onClick={() => {
             setColor(randomColor());
           }}
